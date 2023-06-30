@@ -1,7 +1,13 @@
+"use client"
+import AboutThapathaliComponent from "@/components/AboutThapathaliComponent";
+import CampusChiefComponent from "@/components/CampusChiefComponent";
+import HeroComponent from "@/components/HeroComponent";
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <HeroComponent />
+      <CampusChiefComponent />
+      <AboutThapathaliComponent />
     </div>
   )
 }
