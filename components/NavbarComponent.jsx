@@ -50,13 +50,16 @@ const NavLinks = styled.div`
     flex: 3;
     align-items: center;
     justify-content: flex-end;
-    gap:36px;
+    /* gap:36px; */
 `
 const NavlinkItem = styled(Link)`
+    flex:1;
     cursor: pointer;
     font-size: 18px;
     text-decoration: none;
     color: #000000;
+    min-width:100px;
+    background-color: #ffffff;
     &:hover {
         color: #979797;
     }
@@ -85,6 +88,84 @@ const Searchbutton = styled.div`
 
 
 const NavbarComponent = () => {
+    const MenuItems = [
+        {
+            title: "About",
+            url: "/about",
+            subMenu: [
+                {
+                    title: "Mission, Vision and Values",
+                    url: "/about/mvv"
+                },
+                {
+                    title: "Organization Chart",
+                    url: "/about/organization"
+                },
+                {
+                    title: "Key Campus Officials",
+                    url: "/about/keyofficials"
+                },
+                {
+                    title: "Campus Units and Sections",
+                    url: "/about/units",
+                    subMenu: [
+                        {
+                            title: "Examination Section",
+                            url: "/about/units/examination"
+                        },
+                        {
+                            title: "Administrative Section",
+                            url: "/about/units/administrative"
+                        },
+                        {
+                            title: "Education Management Information System Unit",
+                            url: "/about/units/emis"
+                        },
+                        {
+                            title: "Consultancy Services Unit",
+                            url: "/about/units/consultancy"
+                        },
+                        {
+                            title: "Research and Development Unit",
+                            url: "/about/units/research"
+                        }
+                    ]
+                },
+                {
+                    title: "Campus Map",
+                    url: "/about/map"
+                },
+                {
+                    title: "Campus Rules and Guidelines",
+                    url: "/about/rules"
+                }
+            ]
+        },
+        {
+            title: "Academics & Research",
+            url: "/academics",
+        },
+        {
+            title: "Admission",
+            url: "/admission",
+        },
+        {
+            title: "Happenings",
+            url: "/happenings",
+        },
+        {
+            title: "Resources",
+            url: "/resources",
+        },
+        {
+            title: "Campus Life",
+            url: "/campuslife",
+        },
+        {
+            title: "Careers",
+            url: "/careers",
+        }
+    ]
     return (
         <Navbar>
             <LogoContainer>
@@ -96,12 +177,15 @@ const NavbarComponent = () => {
             </LogoContainer>
 
             <NavLinks>
+                <NavlinkItem href="/about">About
+
+                </NavlinkItem>
+                <NavlinkItem href="/academics">Academics & Research</NavlinkItem>
                 <NavlinkItem href="/admission">Admission</NavlinkItem>
-                <NavlinkItem href="/notice">Notice</NavlinkItem>
+                <NavlinkItem href="/happenings">Happenings</NavlinkItem>
                 <NavlinkItem href="/resources">Resources</NavlinkItem>
-                <NavlinkItem href="/societies">Societies</NavlinkItem>
-                <NavlinkItem href="/units">Units</NavlinkItem>
-                <NavlinkItem href="/about">About</NavlinkItem>
+                <NavlinkItem href="/campuslife">Campus Life</NavlinkItem>
+                <NavlinkItem href="/careers">Careers</NavlinkItem>
             </NavLinks>
             <SearchbuttonContainer>
                 <Searchbutton>

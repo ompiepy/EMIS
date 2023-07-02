@@ -20,6 +20,10 @@ const Footer = styled.footer`
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+
+    @media(max-width: 950px){
+        min-height:450px;
+    }
 `
 const Container = styled.div`
     width:100%;
@@ -28,13 +32,28 @@ const Container = styled.div`
     justify-content:space-between;
     align-items:flex-start;
     padding: 0 32px;
+    z-index:2;
+
+    @media(max-width: 950px){
+        /* flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        gap:32px; */
+        flex-wrap:wrap;
+        gap:32px;
+        
+    }
 `
 const LogoContainer = styled.div`
     width:30%;
     height:100%;
     display:flex;
     gap:12px;
-    z-index:2;
+    
+
+    @media(max-width: 950px){
+        width:90%;
+    }
 `
 
 const Logo = styled.div`
@@ -76,7 +95,9 @@ const QuickLinks = styled.div`
     display:flex;
     flex-direction: column;
     gap:8px;
-    z-index:2;
+    @media(max-width: 950px){
+        min-width:35%;
+    }
 `
 
 const Heading = styled.div`
@@ -84,6 +105,9 @@ const Heading = styled.div`
     font-weight:500;
     color:#ffffff;
     padding-bottom:0.75rem;
+    @media(max-width: 950px){
+        font-size:18px;
+    }
 `
 const Links = styled(Link)`
     text-decoration:none;
@@ -91,6 +115,9 @@ const Links = styled(Link)`
     color:#949494;
     line-height: 1.3rem;
     width:50px;
+    @media(max-width: 950px){
+        font-size:16px;
+    }
 `
 
 const Contact = styled.div`
@@ -99,18 +126,25 @@ const Contact = styled.div`
     display:flex;
     flex-direction: column;
     gap:8px;
-    z-index:2;
+    @media(max-width: 950px){
+        width:55%;
+    }
+    
 `
 const ContactItem = styled.div`
     display:flex;
     gap:24px;
     width:100%;
     padding-bottom:5px;
+    
 `
 const ContactText = styled.div`
     font-size:18px;
     color:#949494;
     line-height: 1.3rem;
+    @media(max-width: 950px){
+        font-size:16px;
+    }
 `
 const BottomSection= styled.div`
     display:flex;
@@ -119,6 +153,9 @@ const BottomSection= styled.div`
     align-items:center;
     height:1.5rem;
     z-index:2;
+    @media(max-width: 950px){
+        padding: 0 16px 32px 16px;
+    }
 
 `
 const SocialMedia = styled.div`
@@ -128,6 +165,9 @@ const SocialMedia = styled.div`
 const Copyright = styled.div`
     font-size:18px;
     color:#FFFBFB;
+    @media(max-width: 950px){
+        font-size:12px;
+    }
 `
 const RandComponent = styled.div`
     font-size: 18px;
