@@ -30,7 +30,7 @@ const Heading = styled.div`
     text-align: center;
 
 `
-const BodyText = styled.div`
+export const BodyText = styled.div`
     font-size: 18px;
     color: #8A8A8A;
     line-height: 2rem;
