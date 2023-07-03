@@ -41,7 +41,9 @@ const IconContainer = styled('div')`
 
 const CurveContainer = styled('div')`
     position: absolute;
-    bottom: 96.5%;
+    width: 100%;
+    height:135px;
+    bottom: 100%;
     left: 0;
     overflow-y: hidden;
 
