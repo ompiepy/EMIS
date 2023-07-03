@@ -275,7 +275,7 @@ const page = () => {
         const getData = async () => {
             const query = await fetch("https://backend.omprakashsharma.com.np/api/notice/notices/", { cache: 'no-store' });
             const response = await query.json();
-            console.log("Response from api", response);
+            console.log("Responses from api", response);
             setNotices(response);
         }
         getData();
@@ -343,7 +343,7 @@ const page = () => {
                                 </ItemDate>
                                 <ItemText>
                                     <ItemTitle>{notice.title}</ItemTitle>
-                                    <ItemSubtitle>{notice.description.substring(3, 150)}...</ItemSubtitle>
+                                    <ItemSubtitle dangerouslySetInnerHTML={{ __html: notice.description }}/>
                                 </ItemText>
                                 <ItemTagContainer>
                                     {/* <ItemTag type={notice.type}>{notice.type}</ItemTag> */}
