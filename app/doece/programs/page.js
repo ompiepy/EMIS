@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { SyllabusTable, NavigationButton, Heading, Dropdown } from './page.styled';
+import { SyllabusTable, NavigationButton, NavigationButtonContainer, Heading, Dropdown, SyllabusTableContainer } from './page.styled';
 
 const Syllabus = () => {
     const [currentYear, setCurrentYear] = useState(1);
@@ -354,7 +354,7 @@ const Syllabus = () => {
             </Heading>
 
             <hr />
-            <div>
+            <NavigationButtonContainer>
                 {[1, 2, 3, 4].map((year) => (
                     <NavigationButton
                         key={year}
@@ -364,9 +364,11 @@ const Syllabus = () => {
                         Year {year}
                     </NavigationButton>
                 ))}
-            </div>
+            </NavigationButtonContainer>
+            <SyllabusTableContainer>
 
             {renderSyllabusTable(currentYear)}
+            </SyllabusTableContainer>
         </>
     );
 };

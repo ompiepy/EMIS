@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const SyllabusTableContainer = styled.div`
+    width: 100%;
+    height: 60vh;
+    border: 1px solid #000;
+`
+
 export const SyllabusTable = styled.table`
   border-collapse: collapse;
   width: 98%;
@@ -34,7 +40,24 @@ export const NavigationButton = styled.button`
   margin-right: 10px;
   margin-left: 25px;
   border-radius: 5px;
+
+    &:hover {
+        background-color: #7588F2;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 10px 20px;
+    }
 `;
+export const NavigationButtonContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+
+`
 
 export const Heading = styled.h1`
   margin: 25px;
