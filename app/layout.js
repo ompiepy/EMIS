@@ -3,7 +3,7 @@ import "./globals.css"
 import FooterComponent from "@/components/FooterComponent"
 
 export const metadata = {
-  title: 'Thapathali campus',
+  title: 'Thapathali Campus',
   description: 'TCIOE',
 }
 
