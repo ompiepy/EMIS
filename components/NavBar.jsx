@@ -3,14 +3,17 @@ import { menuItems } from '@/utils/menuItems'
 import NavBarMenuItems from './NavBarMenuItems'
 
 const NavBar = () => {
+    const depthLevel = 0;
   return (
-    <ul>
-        { menuItems.map((menu, index) => {
-                const depthLevel = 0;
-                return <NavBarMenuItems items={menu} key={index} depthLevel={depthLevel} />
-            })
-        }
-    </ul>
+    <nav>
+        <ul className="menus">
+            { menuItems.map((menu, index) => {
+                    return (
+                        <NavBarMenuItems items={menu} key={index} depthLevel={depthLevel}/>);
+                })
+            }
+        </ul>   
+    </nav>
   )
 }
 

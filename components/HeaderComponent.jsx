@@ -4,13 +4,16 @@ import React from 'react'
 import { styled } from 'styled-components'
 import logo from '@/assets/logo.svg';
 import Image from 'next/image';
+import NavBar from './NavBar';
+import SearchNotice from './SearchNotice';
 
 const Header = styled('header')`
   width: 90vw;
   margin: 0 auto;
-`
 
-const Navbar = styled('nav')`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const Flexbox = styled('div')`
@@ -43,23 +46,21 @@ const TextContainer = styled('div')`
 const HeaderComponent = () => {
   return (
     <Header>
-        <Navbar>
-          <Link href="/" style={{ textDecoration: "none"}}>
-            <Flexbox>
-              <Logo>
-                <Image src={logo} layout="fill" objectFit="contain" alt="" />
-              </Logo>
-              <TextContainer>
-                <Subtitle>Institute of Engineering</Subtitle>
-                <Title>Thapathali Campus</Title>
-              </TextContainer>
-            </Flexbox>
-          </Link>
-
+        <Link href="/" style={{ textDecoration: "none"}}>
           <Flexbox>
-            
+            <Logo>
+              <Image src={logo} layout="fill" objectFit="contain" alt="" />
+            </Logo>
+            <TextContainer>
+              <Subtitle>Institute of Engineering</Subtitle>
+              <Title>Thapathali Campus</Title>
+            </TextContainer>
           </Flexbox>
-        </Navbar>
+        </Link>
+        
+        <NavBar />
+
+        <SearchNotice />
     </Header>
   )
 }
