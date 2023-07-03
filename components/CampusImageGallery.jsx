@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { BodyText } from './AboutThapathaliComponent'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import CampusImageIndividual from './CampusImageIndividual'
 
 const HeadingText = styled('h1')`

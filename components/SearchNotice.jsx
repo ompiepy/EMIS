@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import SearchIcon from '@/assets/searchIcon.svg'
 
 const Container = styled('div')`

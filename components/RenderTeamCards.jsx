@@ -1,7 +1,7 @@
 "use client";
 
 import TeamCard from "./TeamCard";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const CardsContainer = styled.section`
   display: flex;

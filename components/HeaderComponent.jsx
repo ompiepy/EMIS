@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import logo from '@/assets/logo.svg';
 import Image from 'next/image';
 import NavBar from './NavBar';
