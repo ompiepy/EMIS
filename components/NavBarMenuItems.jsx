@@ -28,7 +28,7 @@ const NavBarMenuItems = ({ items, depthLevel }) => {
         <>
           <button type="button" aria-haspopup="menu" onClick={() => setDropdown(prev => !prev)}>
             {items.title}{' '}
-            {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
+            {depthLevel > 0 ? <span>&#x25b6;</span> : <span className="arrow" />}
           </button>
           <DropDownMenu submenus={items.submenu} dropdown={dropdown} depthLevel={depthLevel}/>
         </>
