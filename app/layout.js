@@ -1,6 +1,7 @@
 import NavbarComponent from "@/components/NavbarComponent"
 import "./globals.css"
 import FooterComponent from "@/components/FooterComponent"
+import HeaderComponent from "@/components/HeaderComponent"
 export const metadata = {
   title: 'Thapathali campus',
   description: 'TCIOE',
@@ -14,7 +15,8 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body>
-        <NavbarComponent />
+        {/* <NavbarComponent /> */}
+        <HeaderComponent />
         <main>{children}</main>
         <FooterComponent />
       </body>
