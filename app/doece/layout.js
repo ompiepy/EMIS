@@ -1,10 +1,6 @@
-import { Inter } from "next/font/google";
 import FooterComponent from "@/components/FooterComponent"
 import HeaderComponent from "@/components/HeaderComponent"
-import SubNavBar from "@/components/SubNavBar"
 import { menuItems } from '@/utils/departmentMenuItems';
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Department of Electronics and Computer Engineering",
@@ -21,8 +17,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <HeaderComponent menuItems={menuItems} />
-          <main>{children}</main>
-        <FooterComponent />
+        <main>{children}</main>
       </body>
     </html>
   );

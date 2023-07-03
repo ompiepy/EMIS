@@ -32,7 +32,6 @@ export default function Home() {
         <CampusImageGallery />
         <StudentTestimonials />
       </div>
-      <FooterComponent />
     </>
   )
 }

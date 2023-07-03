@@ -1,5 +1,7 @@
+import HeaderComponent from "@/components/HeaderComponent"
 import "./globals.css"
 import FooterComponent from "@/components/FooterComponent"
+
 export const metadata = {
   title: 'Thapathali campus',
   description: 'TCIOE',
@@ -14,9 +16,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <main>{children}</main>
+        <FooterComponent />
       </body>
-
-
     </html>
   )
 }

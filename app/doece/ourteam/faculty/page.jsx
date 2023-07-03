@@ -1,5 +1,6 @@
 import img1 from "@/assets/img.jpg";
 import { RenderTeamCards } from "@/components/RenderTeamCards";
+
 export default function Home() {
   const FacultyMembers = [
     {

@@ -1,7 +1,10 @@
 "use client"
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-
+import { menuItems } from '@/utils/menuItems';
+import HeaderComponent from '@/components/HeaderComponent';
+import { useRouter } from 'next/router'
+import { Suspense } from 'react';
 
 
 const Wrapper = styled.div`
@@ -70,18 +73,35 @@ const page = ({ params }) => {
     // const router = useRouter()
     // console.log(router)
     // console.log(params)
-    const pdfUrl = `${"@/assets/demo.pdf/"}`;
+    const [notice, setNotice] = useState([]);
+
+    useEffect(() => {
+        const getData = async () => {
+            const query = await fetch(`http://49.236.212.118:8001/api/notice/notices/${params.id}`);
+            const response = await query.json();
+            console.log("Response from api", response);
+            setNotice(response);
+        }
+        getData();
+    }, [])
+    
+    const pdfUrl = notice.download_file;
 
     return (
-        <Wrapper>
-            <Header>
-                <Title>Thapathali Graduate Conference – 2080, Thapathali Campus, IOE, TU Program Schedule</Title>
-                <Line />
-            </Header>
-            <Container  >
-                <object data="https://tcioe.edu.np/public/images/1687964319.pdf" type="application/pdf" style={{ background: 'transparent' }}>   </object>
-            </Container>
-        </Wrapper>
+        <>
+            <HeaderComponent menuItems={menuItems} />
+            <Wrapper>
+                <Header>
+                    <Title>Thapathali Graduate Conference – 2080, Thapathali Campus, IOE, TU Program Schedule</Title>
+                    <Line />
+                </Header>
+                <Container>
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <object data={"https://tcioe.edu.np/public/images/1687964319.pdf"} type="application/pdf" style={{ background: 'transparent' }}>   </object>
+                </Suspense>
+                </Container>
+            </Wrapper>
+        </>
     )
 }
 
