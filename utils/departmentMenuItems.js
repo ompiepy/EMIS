@@ -15,6 +15,14 @@ export const menuItems = [
                 title: "Staffs",
                 url: "/doece/ourteam/staffs"
             },
+            {
+                title: "Computer",
+                url: "/doece/ourteam/computer"
+            },
+            {
+                title: "Electronics and Communication",
+                url: "/doece/ourteam/electronics-and-communication"
+            },
         ]
     },
     {

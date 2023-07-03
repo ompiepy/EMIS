@@ -5,6 +5,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
+:root {
+  --text-color: #333;
+  --secondary-color: #ffffff;
+  --primary-color: #444aca;
+  --bg-color: darkblue;
+  --font-color: #ffffff;
+  --light-brown: #ddd;
+  --dark-brown: #f2f2f2;
+}
+
 .menus {
   display: flex;
   align-items: center;
