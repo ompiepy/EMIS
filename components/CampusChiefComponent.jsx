@@ -99,7 +99,6 @@ const CampusChiefComponent = ({post,name,photo,message}) => {
             <Heading>
                     Message From {post}
                 </Heading>
-        
         <Container>
             <LeftContainer>
                 <BodyText>
@@ -117,7 +116,6 @@ const CampusChiefComponent = ({post,name,photo,message}) => {
             <RightContainer>
                 <Image src={CampusCheifimage} layout="fill" objectFit="contain" alt="Campus Chief" />
             </RightContainer>
-
         </Container>
         </Wrapper>
     )
