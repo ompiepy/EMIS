@@ -8,12 +8,17 @@ import NavBar from './NavBar';
 import SearchNotice from './SearchNotice';
 
 const Header = styled('header')`
-  width: 90vw;
-  margin: 0 auto;
+  width: 100vw;
+  padding: 0 64px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  z-index: 100;
+
+  position:sticky;
+  top:0;
 `
 
 const Flexbox = styled('div')`
@@ -43,7 +48,7 @@ const TextContainer = styled('div')`
   flex-direction: column;
 `
 
-const HeaderComponent = () => {
+const HeaderComponent = ({menuItems}) => {
   return (
     <Header>
         <Link href="/" style={{ textDecoration: "none"}}>
@@ -58,7 +63,7 @@ const HeaderComponent = () => {
           </Flexbox>
         </Link>
         
-        <NavBar />
+        <NavBar menuItems={menuItems} />
 
         <SearchNotice />
     </Header>
