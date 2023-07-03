@@ -9,6 +9,9 @@ import hero from "@/assets/heroDOECE.png";
 import CampusCheifimage from '@/assets/CC_image.png'
 import computer from "@/assets/computer.png";
 import electronics from "@/assets/electronics.png";
+import CampusImageGallery from '@/components/CampusImageGallery';
+import StudentTestimonials from '@/components/StudentTestimonials';
+
 const head_data ={
     post:"Department Head",
     name:"Kiran Chandra Dahal",
@@ -34,11 +37,15 @@ const programs_data = [
 
 const Page = () => {
   return (
-    <div>
-        <HeroComponent img={hero} />
-        <CampusChiefComponent post={head_data.post} name={head_data.name} photo={head_data.photo} message={head_data.message} />
-        <ProgramsOfferedComponent programs={programs_data} />
-    </div>
+    <>
+      <div>
+          <HeroComponent img={hero} />
+          <CampusChiefComponent post={head_data.post} name={head_data.name} photo={head_data.photo} message={head_data.message} />
+          <ProgramsOfferedComponent programs={programs_data} />
+          <CampusImageGallery />
+          <StudentTestimonials />
+      </div>
+    </>
   )
 }
 

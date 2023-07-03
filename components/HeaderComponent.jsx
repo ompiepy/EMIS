@@ -48,7 +48,7 @@ const TextContainer = styled('div')`
   flex-direction: column;
 `
 
-const HeaderComponent = ({menuItems}) => {
+const HeaderComponent = ({ menuItems }) => {
   return (
     <Header>
         <Link href="/" style={{ textDecoration: "none"}}>
@@ -63,7 +63,7 @@ const HeaderComponent = ({menuItems}) => {
           </Flexbox>
         </Link>
         
-        <NavBar menuItems={menuItems} />
+        <NavBar menuItems={menuItems}/>
 
         <SearchNotice />
     </Header>

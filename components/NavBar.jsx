@@ -1,27 +1,19 @@
-import NavbarComponent from "@/components/NavbarComponent"
-import "./globals.css"
-import FooterComponent from "@/components/FooterComponent"
-import HeaderComponent from "@/components/HeaderComponent"
-export const metadata = {
-  title: 'Thapathali campus',
-  description: 'TCIOE',
-}
+import React from 'react'
+import NavBarMenuItems from './NavBarMenuItems';
 
-export default function RootLayout({ children }) {
+const NavBar = ({ menuItems }) => {
+  const depthLevel = 0;
   return (
-    <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </head>
-      <body>
-        {/* <NavbarComponent /> */}
-        <HeaderComponent />
-        <main>{children}</main>
-        <FooterComponent />
-      </body>
-
-
-    </html>
+    <nav>
+      <ul className="menus">
+        {menuItems.map((menu, index) => {
+          return (
+            <NavBarMenuItems items={menu} key={index} depthLevel={depthLevel}/>
+          );
+        })}
+      </ul>
+    </nav>
   )
 }
+
+export default NavBar

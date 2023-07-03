@@ -9,6 +9,10 @@ import StudentTestimonials from "@/components/StudentTestimonials";
 //paxi backend bata data fetch garera pathaune
 import hero from "@/assets/Hero.png";
 import CampusCheifimage from '../assets/CC_image.png'
+import HeaderComponent from "@/components/HeaderComponent";
+import { menuItems } from "@/utils/menuItems";
+import FooterComponent from "@/components/FooterComponent";
+
 const data = {
   post: "Campus chief",
   name: "Dr. Prof. Khem Gyawali",
@@ -18,13 +22,17 @@ const data = {
 
 export default function Home() {
   return (
-    <div>
-      <HeroComponent img={hero} />
-      <CampusChiefComponent post={data.post} name={data.name} photo={data.photo} message={data.message} />
-      <AboutThapathaliComponent />
-      <OurDepartmentsSection />
-      <CampusImageGallery />
-      <StudentTestimonials />
-    </div>
+    <>
+      <HeaderComponent menuItems={menuItems}/>
+      <div>
+        <HeroComponent img={hero} />
+        <CampusChiefComponent post={data.post} name={data.name} photo={data.photo} message={data.message} />
+        <AboutThapathaliComponent />
+        <OurDepartmentsSection />
+        <CampusImageGallery />
+        <StudentTestimonials />
+      </div>
+      <FooterComponent />
+    </>
   )
 }
