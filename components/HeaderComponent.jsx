@@ -8,7 +8,7 @@ import NavBar from './NavBar';
 import SearchNotice from './SearchNotice';
 
 const Header = styled('header')`
-  width: 100vw;
+  width: 100%;
   padding: 0 64px;
 
   display: flex;
