@@ -97,7 +97,7 @@ const page = ({ params }) => {
                 </Header>
                 <Container>
                 <Suspense fallback={<h1>Loading...</h1>}>
-                    <object data={"https://tcioe.edu.np/public/images/1687964319.pdf"} type="application/pdf" style={{ background: 'transparent' }}>   </object>
+                    <object data={"https://tcioe.edu.np/public/images/1687964319.pdf"} type="application/pdf" style={{ background: 'transparent' }}></object>
                 </Suspense>
                 </Container>
             </Wrapper>

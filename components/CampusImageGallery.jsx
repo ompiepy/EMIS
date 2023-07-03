@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { BodyText } from './AboutThapathaliComponent'
 import { styled } from 'styled-components'
