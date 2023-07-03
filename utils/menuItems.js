@@ -61,7 +61,7 @@ export const menuItems = [
     },
     {
         title: "Happenings",
-        url: "/happenings",
+        url: "/notices",
     },
     {
         title: "Resources",
