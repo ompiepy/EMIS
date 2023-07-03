@@ -4,7 +4,7 @@ import { styled } from 'styled-components'
 import StudentTestimonialCard from './StudentTestimonialCard'
 import usePosition from '../utils/usePosition'
 
-const Container = styled('section')`
+const Container = styled.section`
     position: relative;
 
     width: 100%;
@@ -15,7 +15,7 @@ const Container = styled('section')`
 
 `
 
-const H1 = styled('h1')`
+const H1 = styled.h1`
     font-size: 26px;
     color: #fff;
     text-align: center;
